@@ -1,0 +1,82 @@
+<body class="body">
+    <div class="container">
+        <mat-toolbar>
+            <span>Crear Usuario</span>
+        </mat-toolbar>
+
+        <mat-card style="margin-top: 10px;">
+            <form [formGroup]="form" (ngSubmit)="agregarUsuario()">
+                <mat-grid-list cols="4" rowHeight="100px">                    
+                    <mat-grid-tile [colspan]=1 [rowspan]=1>
+                        <mat-form-field class="ancho">
+                            <mat-label for ="email" >Correo</mat-label>
+                            <input matInput autocomplete="off" type="email" formControlName="correo"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">                       
+                        </mat-form-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile [colspan]=3 [rowspan]=6>
+                        <img src="./assets/img/usuario.png" width="250" height="250">
+                    </mat-grid-tile>
+                    <mat-grid-tile [colspan]=1 [rowspan]=1>
+                        <mat-form-field class="ancho">
+                            <mat-label>Fono</mat-label>
+                            <input matInput autocomplete="off" type="text" formControlName="fono"
+                            pattern="[0-9]{9}">
+                        </mat-form-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile [colspan]=1 [rowspan]=1>
+                        <mat-form-field class="ancho">
+                            <mat-label>Nombre</mat-label>
+                            <input matInput autocomplete="off" type="text" formControlName="nombre"
+                            pattern="[a-zA-Z]{2,15}">
+                        </mat-form-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile [colspan]=1 [rowspan]=1>
+                        <mat-form-field class="ancho">
+                            <mat-label>Apellido</mat-label>
+                            <input matInput autocomplete="off" type="text" formControlName="apellido"
+                            pattern="[a-zA-Z]{2,15}">
+                        </mat-form-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile [colspan]=1 [rowspan]=1>
+                        <mat-form-field class="ancho">
+                            <mat-label>Direccion</mat-label>
+                            <input matInput autocomplete="off" type="text" formControlName="direccion"
+                            >
+                        </mat-form-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile [colspan]=1 [rowspan]=1>
+                        <mat-form-field class="ancho">
+                            <mat-label>Comuna</mat-label>
+                            <input matInput autocomplete="off" type="text" formControlName="comuna"
+                            pattern="[a-zA-Z]{3,15}">
+                        </mat-form-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile [colspan]=1 [rowspan]=1>
+                        <mat-form-field class="ancho">
+                            <mat-label>Entrega por:</mat-label>
+                            <mat-select formControlName="entrega">
+                              <mat-option *ngFor="let item of entrega" [value]="item"  >
+                                {{item}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile [colspan]=2 [rowspan]=1>
+                        <button  type="reset"  mat-raised-button style="margin-right: 20px;">Limpiar</button>
+                        <button  type="submit" [disabled]="form.invalid" mat-raised-button color="primary">Guardar</button>
+                    </mat-grid-tile>
+
+                   
+
+                </mat-grid-list>
+
+                <br>
+                <br>
+
+
+            </form>
+        </mat-card>
+    </div>
+
+</body>

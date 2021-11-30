@@ -1,0 +1,33 @@
+
+.imgRedonda {
+    width:100;
+    height:100;
+    border-radius:300px;
+}
+
+/* .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #01376e;
+    color: white;
+    font-weight: 500;
+  } */
+
+  .toolbar #facebook-logo {
+    height: 40px;
+    margin: 0 10px;
+  }
+
+  .toolbar #instagram-logo {
+    height: 40px;
+    margin: 0 10px;
+  }
+  .toolbar #whatsap-logo {
+    height: 40px;
+    margin: 0 10px;
+  }

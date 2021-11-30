@@ -1,0 +1,26 @@
+<body class="body">
+    <div class="container">
+        <mat-toolbar>
+            <span>Dashboard</span>
+        </mat-toolbar>
+        <div>
+            <model-viewer id="color" 
+            camera-controls interaction-prompt="none" src="./assets/glb/Cubo.glb" arar ar-placement="wall"
+                ar-modes="webxr scene-viewer quick-look" alt="A 3D model of an astronaut">
+                <!-- <model-viewer bounds="tight" src="./assets/glb/Cubo.glb" ar ar-placement="wall"
+                    ar-modes="scene-viewer webxr quick-look" camera-controls environment-image="neutral"
+                    shadow-intensity="0" skybox-image="neutral"> -->
+                    <button slot="ar-button" style="color: black; position: fixed; margin-left: 20px;">
+                        👋 Active AR
+                    </button>
+                </model-viewer>
+                <!-- <div>
+                <stl-model-viewer
+      [centered]="true"
+    ></stl-model-viewer>
+    <stl-model-viewer [stlModels]="['./assets/cubo.stl']"></stl-model-viewer>
+              </div> -->
+
+        </div>
+    </div>
+</body>
